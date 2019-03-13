@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>learn Resources</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <h1>最近7天新增问题<td th:text="${issuesList.size()}"></td>个</h1>
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <tr>
+            <td>Project</td>
+            <td>Component</td>
+            <td>Time</td>
+        </tr>
+        <!--/*@thymesVar id="learnList" type=""*/-->
+        <tr th:each="issue : ${issuesList}">
+            <td th:text="${issue.project}"></td>
+            <td th:text="${issue.component}"></td>
+            <td th:text="${issue.time}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

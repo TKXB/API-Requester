@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SonarQube 项目统计</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <h1>SonarQube 项目统计</h1>
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <!--/*@thymesVar id="learnList" type=""*/-->
+        <tr>
+            <td>项目总数</td>
+        </tr>
+        <tr>
+            <td th:text="${paging.total}">项目总数</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
